@@ -1,6 +1,7 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link'; // used to link between sites
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link"; // used to link between sites
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,9 +12,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to my engineering blog!
-        </h1>
+        <h1 className={styles.title}>Welcome to my engineering blog!</h1>
+
+        <Image src="/image.png" alt="image" width="400" height="400" />
 
         <p className={styles.description}>
           Get started by reading about my blog!
@@ -30,22 +31,15 @@ export default function Home() {
             <p>Learn FullStack Development with Relational Databases</p>
           </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
+          <Link href="/posts/third-post" className={styles.card}>
             <h3>Third Blog &rarr;</h3>
             <p>Learn React and MongoDB</p>
-          </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
+          <Link href="/posts/fourth-post" className={styles.card}>
             <h3> Fourth Blog &rarr;</h3>
-            <p> I am a truck driving, software engineer. How cool is that!
-            </p>
-          </a>
+            <p> I am a truck driving, software engineer. How cool is that!</p>
+          </Link>
         </div>
       </main>
 
@@ -55,7 +49,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -92,15 +86,8 @@ export default function Home() {
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
       `}</style>
 
@@ -109,17 +96,8 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
         * {
